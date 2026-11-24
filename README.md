@@ -4,12 +4,12 @@ A turn-based console RPG built in **C# / .NET 10** to practice Object-Oriented P
 
 *(Note: Console prompts and in-game messages are in French.)*
 
-### Key Concepts Applied
-* **Object-Oriented Architecture:** Separation between entities (`Models`), contracts (`Interfaces`), and console rendering (`Afficher`).
-* **Polymorphism & Inheritance:** Shared combat mechanics across different hero and monster classes.
-* **Interface Segregation:** Decoupled behaviors and abilities implemented via C# interfaces.
+### Preview
+![Gameplay Preview](./preview.png)
 
-### Project Structure
+### Technologies & Architecture
+* **Language & Runtime:** C#, .NET 10.0
+* **Concepts:** Inheritance (`Personnage` -> `Hero` / `Monstre`), Interfaces (`ICuir`, `IOr`), Console UI separation (`AfficherConsole`)
 
     Heroes-Vs-Monsters/
     ├── Afficher/
@@ -33,3 +33,11 @@ A turn-based console RPG built in **C# / .NET 10** to practice Object-Oriented P
     git clone https://github.com/jossua-derval/Heroes-Vs-Monsters.git
     cd Heroes-Vs-Monsters
     dotnet run
+
+### What I Learned
+* Structuring a multi-folder C# project by separating models, interfaces, and display logic.
+* Using inheritance to factorize shared character stats (`Personnage`) and interfaces (`ICuir`, `IOr`) to handle lootable resources cleanly without multiple inheritance.
+
+### Next Improvements
+* [ ] Add unit tests (xUnit) for dice rolls and combat damage calculations.
+* [ ] Refactor console display into a dedicated service interface to decouple game logic from `System.Console`.
