@@ -12,11 +12,20 @@ A turn-based console RPG built in **C# / .NET 10** to practice Object-Oriented P
 ### Project Structure
 
     Heroes-Vs-Monsters/
-    ├── Afficher/               # Console display and combat log formatting
-    ├── Interfaces/             # Shared behavior contracts
-    ├── Models/                 # Hero, monster, and game entity classes
-    ├── Program.cs              # Main game loop and turn management
-    └── HeroesVSMonsters.csproj # .NET 10.0 project configuration
+    ├── Afficher/
+    │   └── AfficherConsole.cs    # Console UI and combat log rendering
+    ├── Interfaces/
+    │   ├── ICuir.cs              # Leather loot interface
+    │   └── IOr.cs                # Gold loot interface
+    ├── Models/
+    │   ├── Heros/                # Hero base class and playable races (Humain, Nain)
+    │   ├── Monstres/             # Monster base class and enemy types (Dragonnet, Loup, Orque)
+    │   ├── Combat.cs             # Turn-based battle resolution
+    │   ├── De.cs                 # Dice roll mechanics
+    │   ├── Personnage.cs         # Base character stats and attributes
+    │   └── Plateau.cs            # Grid map and movement logic
+    ├── Program.cs                # Main game loop
+    └── HeroesVSMonsters.csproj   # .NET 10.0 project configuration
 
 ### Getting Started
 * **Prerequisite:** [.NET 10.0 SDK](https://dotnet.microsoft.com/download)
